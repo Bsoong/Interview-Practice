@@ -1,0 +1,38 @@
+{
+  "name": "interview-practice",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Interview practice projects collection - multiple projects sharing dependencies",
+  "scripts": {
+    "dev": "npm run dev:basic-app",
+    "build": "npm run build:basic-app",
+    "preview": "npm run preview:basic-app",
+    "lint": "eslint . --ext js,jsx,ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "dev:basic-app": "vite --config vite.config.js",
+    "build:basic-app": "vite build --config vite.config.js",
+    "preview:basic-app": "vite preview --config vite.config.js",
+    "dev:holidays": "vite --config projects/public-holidays/vite.config.js serve projects/public-holidays",
+    "build:holidays": "vite --config projects/public-holidays/vite.config.js build projects/public-holidays",
+    "preview:holidays": "vite --config projects/public-holidays/vite.config.js preview projects/public-holidays",
+    "clean": "rimraf dist */dist node_modules/.vite",
+    "list-projects": "echo Available projects: && echo - Basic App (npm run dev:basic-app) && echo - Public Holidays (npm run dev:holidays)"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@tanstack/react-query": "^5.8.4",
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.55.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "rimraf": "^5.0.5",
+    "vite": "^5.0.8"
+  }
+}
